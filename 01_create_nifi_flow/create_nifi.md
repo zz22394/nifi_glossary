@@ -111,4 +111,13 @@ NiFi のプロセッサーでは、ちょっとした文字列の置き換えや
 
 代表的なものとして、たとえば現在時刻を日本時間で `2024/11/27 18:36:03.264Z` のような形式で取得してプロセッサーのパラメータ等に設定したい場合、 `${now():format("yyyy/MM/dd HH:mm:ss.SSS'Z'", "Asia/Tokyo")}` という NEL を使って実現することができます。
 
-詳細は[NELの解説ドキュメント](https://nifi.apache.org/docs/nifi-docs/html/expression-language-guide.html)をご参照ください。
+以下は GenerateFlowFile プロセッサーの Custom Text で、東京の現在時刻を設定している例です。
+
+![img](img/nel_howto.png)
+
+上記のプロセッサーを処理すると、以下のような Content を持つ Flowfile がキューに入ります。
+
+![img](img/nel_value_set.png)
+
+NELでは上記のような現在時刻の取得以外にも、文字列の置き換えや論理演算など、様々なことができます。　　
+すべての機能の詳細は、[NELの解説ドキュメント](https://nifi.apache.org/docs/nifi-docs/html/expression-language-guide.html)をご参照ください。
