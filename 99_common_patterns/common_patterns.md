@@ -8,7 +8,7 @@
 common_patterns/     # このディレクトリ
 ├ 処理パターン名/  
 　 ├ 処理パターン名.md  # フロー内容の説明  
-　 ├ 処理パターン名.xml # NiFiにインポート可能なテンプレート
+　 ├ 処理パターン名.xml または .json # NiFiにインポート可能なテンプレート
 ```
 
 たとえば、list_fetchパターンのフローの場合、以下のような形式でこのディレクトリ内に配置します。
@@ -17,5 +17,5 @@ common_patterns/     # このディレクトリ
 common_patterns/    
 ├ list_fetch/  
 　 ├ list_fetch.md 
-　 ├ list_fetch.xml
+　 ├ list_fetch.xml または list_fetch.json 
 ```
